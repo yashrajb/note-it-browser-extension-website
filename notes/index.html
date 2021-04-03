@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Note It - Save text content of any website - Minimalist chrome extension for students & researchers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <style>
+    .navbar-brand,.navbar-brand:hover {
+      padding:10px 15px;
+      color:black !important;
+      font-size:40px;
+      text-transform:lowercase;
+      text-decoration: underline;
+    }
+    body {
+      background:#e0e0e0;
+      font-family:'Roboto'
+    }
+    .jumbotron {
+      background:#e0e0e0;
+    } 
+    .nav-link,.nav-link:hover {
+      color:black !important;
+      font-size:17px;
+    }
+    #btn-download {
+      border-color:black;
+      color:black;
+      border-radius:0px;
+      font-size:20px;
+    }
+    #btn-download:hover {
+      background:black;
+      color:#e0e0e0
+    }
+    h1, p {
+      color:black;
+    }
+    h1 {
+      font-size:48px !important;
+    }
+    .navbar {
+      padding:20px;
+    }
+    .navbar-default,.thumbnail {
+      background:transparent;
+    }
+    .main-img {
+      margin:20px 0px;
+      width:720px;
+    }
+    #credits {
+      font-size:17px;
+    }
+    .whiteBoard{
+                   background:white;
+                   padding:200px 100px;
+    }
+    #content {
+                   font-size:35px;
+    }
+    h5 {
+      font-size:21px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand">Note It.</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" href="https://yashrajb.github.io" target="_blank">About Developer</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+<div class="jumbotron container">
+        <h3 id="title"></h3>
+        <div class="whiteBoard">
+               <h4 id="content"></h4>
+        </div>
+        <h5><a id="contentUrl"></a></h5>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script>
+
+
+               
+var url = new URLSearchParams(window.location.search);
+var q = url.get("q");
+console.log(url,q);
+if(!q){
+              window.location.href = "/";
+}
+var decryptedContent = CryptoJS.AES.decrypt(q,'');
+decryptedContent = decryptedContent.toString(CryptoJS.enc.Utf8);
+decryptedContent = JSON.parse(decryptedContent);
+console.log("==============>",decryptedContent);
+document.getElementById("title").innerText = decryptedContent.title;
+document.getElementById("content").innerText = decryptedContent.content;
+document.getElementById("contentUrl").href = decryptedContent.url;
+document.getElementById("contentUrl").innerText = decryptedContent.url;
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
