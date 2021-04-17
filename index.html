@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Note It - Save text content of any website - Minimalist chrome extension for students & researchers</title>
+  <title>Note It - Save text content of any website - Minimalist chrome extension for students & researchers - Notes Saver</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Note It  - Save text content of any website - Minimalist chrome extension for students & researchers">
+  <meta name="description" content="Note It save text content of any website you can also share link of your notes and you can also export your notes"/>
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://notesit.netlify.app/">
+  <meta property="twitter:title" content="Note It - Save text content of any website - Minimalist chrome extension for students & researchers - Notes Saver">
+  <meta property="twitter:description" content="Note It save text content of any website you can also share link of your notes and you can also export your notes">
+  <meta property="twitter:image" content="https://notesit.netlify.app/favicon.png">
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" />
   <style>
     .navbar-brand,.navbar-brand:hover {
       padding:10px 15px;
@@ -51,10 +61,29 @@
     .main-img {
       margin:20px 0px;
       width:720px;
+      box-shadow:3px 3px 3px grey;
     }
     #credits {
       font-size:17px;
+      padding-bottom: 20px;
     }
+    #features .row {
+      padding:50px;
+    }
+    #features h1 {
+      font-size:26px !important;
+    }
+    #features h2 {
+      text-decoration: underline;
+    }
+    #features img {
+      width:110px;
+    }
+
+    #features p {
+      font-size:21px;
+    }
+    
   </style>
 </head>
 <body>
@@ -67,7 +96,8 @@
         <a class="navbar-brand">Note It.</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link" href="https://yashrajb.github.io" target="_blank">About Developer</a></li>
+        <li><a class="nav-link" href="#features">features</a></li>
+        <li><a class="nav-link" href="https://yashrajb.github.io" target="_blank">about creator</a></li>
       </ul>
     </div>
   </nav>
@@ -87,13 +117,76 @@
       <div class="text-center thumbnail">
         <img class="main-img img-responsive" src="./main.gif" alt="note it chrome extension" />
       </div>
-        <p id="credits" class="text-center">created with ❤️ by <a href="https://yashrajb.github.io" target="_blank" style="color:black">yashraj basan</a></p>
+        
     <!-- </div>
   </div> -->
 </div>
 
+<div id="features" class="container">
+  <h2 class="text-center">features</h2>
 
 
+  <div class="row">
+    <div class="col-lg-6 col-xl-6 col-md-6">
+        <img class="img-responsive" style="float:right;" src="./no-authentication.png" alt="note it chrome extension" />
+    </div>
+    <div class="col-lg-6 col-xl-6 col-md-6">
+      <h1>No Authentication</h1>
+      <p>no username, email password is needed to use this extension. just download it and start using</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    
+    <div class="col-lg-6 col-xl-6 col-md-6">
+      <img class="img-responsive" style="float:right;" src="./no-tracking.jpg" alt="note it chrome extension" />
+  </div>
+    <div class="col-lg-6 col-xl-6 col-md-6 text-left">
+      <h1>No Tracking</h1>
+      <p>just like every other extension track your every information and sell it to others. this extension don't 
+        track anythig.
+      </p>
+    </div>
+    
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-6 col-xl-6 col-md-6">
+      <img class="img-responsive" style="float:right;" src="./img_521981.png" alt="note it chrome extension" />
+  </div>
+    <div class="col-lg-6 col-xl-6 col-md-6">
+      <h1>Share link of saved note</h1>
+      <p>sometimes you want to show your notes to your other friends.note it gives you easy way to share the note to 
+        your friends. just copy link and send it your friends</p>
+    </div>
+    
+    
+  </div>
+
+  <div class="row">
+    
+    <div class="col-lg-6 col-xl-6 col-md-6">
+      <img class="img-responsive" style="float:right;" src="./export-icon.png" alt="note it chrome extension" />
+    </div>
+    <div class="col-lg-6 col-xl-6 col-md-6">
+      <h1>Export your saved notes</h1>
+      <p>note it gives you easy way to export your notes. so, you can print your notes easily without creating 
+        document and copy and pasting each and every notes</p>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+<div id="credits" class="text-center">
+  <div class="text-center">Icon made from <a style="color:black" href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> <a style="color:black" href="https://icon-library.net/icon/tracking-icon-0.html">icon library</a> </div>
+  <p>created with ❤️ by <a href="https://yashrajb.github.io" target="_blank" style="color:black">yashraj basan</a></p>
+
+</div>
 
 
 </body>
